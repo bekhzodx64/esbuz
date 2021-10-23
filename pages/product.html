@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title></title>
+  </head>
+  <body class="bg-[#f5f5f5]">
+    <div class="overflow-x-hidden h-screen flex flex-col">
+      <!-- header -->
+      <header class="py-[15px] bg-white fixed top-0 right-0 left-0 z-50">
+        <div class="container flex justify-between items-center gap-5">
+          <div class="select-none">
+            <img
+              src="../img/icons/burger.svg"
+              alt="Логотип"
+              class="lg:hidden"
+              id="burger-icon"
+            />
+            <img
+              src="../img/logo-desktop.svg"
+              alt="Логотип"
+              class="hidden lg:block"
+            />
+          </div>
+          <ul class="hidden lg:flex w-full max-w-[540px] justify-between">
+            <li>
+              <a href="../index.html" class="flex items-center">
+                <img
+                  src="../img/icons/home.svg"
+                  alt="Главная"
+                  class="mr-3 select-none"
+                />
+                Главная</a
+              >
+            </li>
+            <li>
+              <a href="./categories.html" class="flex items-center">
+                <img
+                  src="../img/icons/category.svg"
+                  alt="Категории"
+                  class="mr-3 select-none"
+                />
+                Категории</a
+              >
+            </li>
+            <li>
+              <a href="./contacts.html" class="flex items-center">
+                <img
+                  src="../img/icons/contacts.svg"
+                  alt="Контакты"
+                  class="mr-3 select-none"
+                />
+                Контакты</a
+              >
+            </li>
+            <li>
+              <a href="./about.html" class="flex items-center">
+                <img
+                  src="../img/icons/about-company.svg"
+                  alt="О компании"
+                  class="mr-3 select-none"
+                />
+                О компании</a
+              >
+            </li>
+          </ul>
+          <ul
+            class="
+              hidden
+              lg:flex
+              w-full
+              max-w-[50px]
+              justify-between
+              uppercase
+              select-none
+            "
+          >
+            <li><a href="#" class="lang-active">ru</a></li>
+            <li><a href="#">uz</a></li>
+          </ul>
+          <form
+            action="#"
+            class="relative xl:w-full max-w-[285px] hidden lg:block"
+          >
+            <input
+              type="text"
+              class="
+                w-full
+                rounded-xl
+                pl-3
+                pr-[50px]
+                py-[10px]
+                outline-none
+                bg-[#F5F5F5]
+              "
+              placeholder="Поиск..."
+            />
+            <button
+              class="
+                bg-blue-700
+                p-4
+                rounded-xl
+                absolute
+                top-0
+                right-0
+                bottom-0
+                select-none
+              "
+            >
+              <img src="../img/main/search.svg" alt="Поиск" class="block" />
+            </button>
+          </form>
+          <div class="flex-1 select-none lg:hidden">
+            <a href="../index.html">
+              <img src="../img/logo.svg" alt="Логотип" class="block mx-auto" />
+            </a>
+          </div>
+          <div class="select-none lg:hidden" id="mobile-search">
+            <img src="../img/icons/search.svg" alt="Поиск" />
+          </div>
+        </div>
+        <div
+          class="
+            hidden
+            lg:hidden
+            bg-black bg-opacity-60
+            absolute
+            top-full
+            right-0
+            left-0
+            h-screen
+          "
+          id="mobile-menu"
+        >
+          <div
+            class="
+              bg-white
+              w-full
+              max-w-[255px]
+              rounded-br-[20px]
+              p-11
+              space-y-16
+            "
+          >
+            <ul class="space-y-10">
+              <li>
+                <a href="../index.html" class="flex items-center">
+                  <img src="../img/icons/home.svg" alt="Главная" class="mr-3" />
+                  Главная</a
+                >
+              </li>
+              <li>
+                <a href="./categories.html" class="flex items-center">
+                  <img
+                    src="../img/icons/category.svg"
+                    alt="Категории"
+                    class="mr-3"
+                  />
+                  Категории</a
+                >
+              </li>
+              <li>
+                <a href="./contacts.html" class="flex items-center">
+                  <img
+                    src="../img/icons/contacts.svg"
+                    alt="Контакты"
+                    class="mr-3"
+                  />
+                  Контакты</a
+                >
+              </li>
+              <li>
+                <a href="./about.html" class="flex items-center">
+                  <img
+                    src="../img/icons/about-company.svg"
+                    alt="О компании"
+                    class="mr-3"
+                  />
+                  О компании</a
+                >
+              </li>
+            </ul>
+            <ul class="flex w-full max-w-[60px] justify-between uppercase">
+              <li><a href="#" class="lang-active">ru</a></li>
+              <li><a href="#">uz</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- end of header -->
+
+      <!-- search -->
+      <div
+        class="
+          hidden
+          fixed
+          w-full
+          h-screen
+          bg-black
+          z-40
+          bg-opacity-60
+          pt-[86px]
+        "
+        id="mobile-search-form"
+      >
+        <div class="container">
+          <form action="#" class="relative">
+            <input
+              type="text"
+              class="w-full rounded-xl pl-3 pr-[50px] py-[10px] outline-none"
+              placeholder="Поиск..."
+            />
+            <button
+              class="bg-blue-700 p-4 rounded-xl absolute top-0 right-0 bottom-0"
+            >
+              <img src="../img/main/search.svg" alt="Поиск" class="block" />
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- end of search -->
+
+      <!-- modal -->
+      <div
+        id="modal"
+        class="hidden fixed w-full h-screen bg-black z-50 bg-opacity-60"
+      >
+        <div class="container flex flex-col items-center justify-center h-full">
+          <form
+            action="#"
+            class="
+              w-full
+              max-w-[600px]
+              bg-white
+              rounded-[20px]
+              overflow-hidden
+              space-y-7
+              px-6
+              pb-6
+              pt-10
+              relative
+            "
+          >
+            <h3 class="section-title mb-2">Обратный звонок</h3>
+            <input type="text" placeholder="Имя и Фамилия" class="input" />
+            <input type="tel" placeholder="Номер телефона" class="input" />
+            <div class="flex justify-end">
+              <button class="main-btn">Отправить</button>
+            </div>
+            <div id="close" class="absolute right-5 top-0 cursor-pointer">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M13.3043 11.4304C13.8841 12.0211 13.8841 12.9662 13.3043 13.557C12.7246 14.1477 11.7971 14.1477 11.2174 13.557L6.92754 9.06751L2.52174 13.557C1.94203 14.1477 1.01449 14.1477 0.434783 13.557C-0.144928 12.9662 -0.144928 12.0211 0.434783 11.4304L4.84058 6.94093L0.550725 2.56962C0.202899 2.33333 0.0869565 1.9789 0.0869565 1.50633C0.0869565 1.1519 0.202899 0.797468 0.550725 0.443038C1.13043 -0.147679 2.05797 -0.147679 2.63768 0.443038L7.04348 4.93249L11.4493 0.443038C12.029 -0.147679 12.9565 -0.147679 13.5362 0.443038C13.7681 0.679325 14 1.1519 14 1.50633C14 1.86076 13.8841 2.21519 13.5362 2.56962L8.89855 7.05907L13.3043 11.4304Z"
+                    fill="#353535"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="14" height="14" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- end of modal -->
+
+      <!-- success -->
+      <div class="hidden fixed w-full h-screen bg-black z-50 bg-opacity-60">
+        <div class="container flex flex-col items-center justify-center h-full">
+          <div
+            class="
+              w-full
+              max-w-[600px]
+              bg-white
+              rounded-[20px]
+              overflow-hidden
+              p-6
+              relative
+              text-center
+            "
+          >
+            <h3 class="text-2xl mb-5">Заявка успешно отправлена</h3>
+            <p class="text-2xl">Спасибо!</p>
+            <a
+              href="#"
+              class="
+                main-btn
+                ring-green-300
+                inline-block
+                mt-10
+                bg-gradient-to-r
+                ring-offset-1
+                from-[#90E66B]
+                via-[#90E66B]
+                to-green-300
+              "
+              >Закрыть</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- end of success -->
+
+      <!-- breadcrumbs -->
+      <div class="container breadcrumbs">
+        <a href="#">Главная</a>
+        <a href="#" class="breadcrumbs-link">
+          <span class="breadcrumbs-dot"></span>
+          Категории
+        </a>
+        <a href="#" class="breadcrumbs-link">
+          <span class="breadcrumbs-dot"></span>
+          Насосы для бассейнов
+        </a>
+        <a href="#" class="breadcrumbs-link breadcrumbs-active">
+          <span class="breadcrumbs-dot"></span>
+          Насос поверхностный PlurJET100
+        </a>
+      </div>
+      <!-- end of breadcrumbs -->
+
+      <!-- product -->
+      <div class="container py-5">
+        <h2 class="product-title md:hidden">Насос поверхностный PlurJET 100</h2>
+        <div class="space-y-5">
+          <div
+            class="
+              space-y-5
+              md:space-y-0 md:grid md:grid-cols-2 md:gap-[30px]
+              lg:flex
+            "
+          >
+            <div
+              class="
+                w-[285px]
+                h-[285px]
+                mx-auto
+                rounded-[18px]
+                overflow-hidden
+                select-none
+                md:w-[350px] md:h-[350px] md:m-0
+                lg:w-[420px] lg:h-[420px]
+              "
+            >
+              <img
+                src="../img/products/1.jpg"
+                alt="Название продукта"
+                class="block w-full h-full object-cover object-center"
+              />
+            </div>
+            <div class="space-y-5 lg:flex-1">
+              <h2
+                class="product-title hidden md:block text-left lg:text-[28px]"
+              >
+                Насос поверхностный PlurJET 100
+              </h2>
+
+              <p
+                class="
+                  text-[#999999]
+                  font-medium
+                  text-xl
+                  sm:text-center
+                  md:text-left
+                "
+              >
+                Pedrollo
+              </p>
+              <a
+                href="#"
+                id="product-btn"
+                class="
+                  rounded-xl
+                  bg-[#114FAC]
+                  text-white
+                  px-14
+                  py-3
+                  block
+                  w-full
+                  font-medium
+                  text-lg text-center
+                  select-none
+                  sm:max-w-[300px]
+                  mx-auto
+                  md:m-0
+                "
+                >Обратный звонок</a
+              >
+            </div>
+          </div>
+          <span
+            class="
+              py-2
+              px-5
+              bg-white
+              rounded-xl
+              inline-block
+              text-[#5E5E5E] text-sm
+              select-none
+            "
+            >Описание</span
+          >
+          <div class="product-description">
+            <h3>Условное обозначение</h3>
+            <p>
+              Например БВ 0,12–40 «Малыш - М» (п) I кл. ГОСТ 26287-84, где: БВ -
+              бытовой вибрационный, 0,12 - объемная номинальная подача, л/с 40 -
+              напор при номинальной подаче, м, МАЛЫШ (МАЛЫШ-М, МАЛЫШ-3) -
+              торговое наименование (п) - обозначение корпуса насоса: (п) -
+              пластмассовое исполнение корпуса, без обозначения - алюминиевое I
+              кл. - класс защиты от поражения электрическим током, I - 1 класс
+              защиты от поражения электрическим током, без обозначения - II
+              класс защиты от поражения электрическим током.
+            </p>
+            <h3>Назначение</h3>
+            <p>
+              Электронасосы бытовые вибрационные (далее насос) БВ 0,12-40
+              «Малыш», «Малыш-М» предназначены для подачи воды из шахтных
+              колодцев и скважин с внутренним диаметром более 100 мм,
+              электронасосы БВ 0,12-20 «Малыш-3» - из шахтных колодцев и скважин
+              с внутренним диаметром более 80 мм, а также из открытых водоемов
+              температурой до 35 °С.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end of product -->
+
+      <!-- footer -->
+      <footer class="bg-white py-11 mt-auto">
+        <div
+          class="
+            container
+            space-y-5
+            md:space-y-0 md:grid md:grid-cols-4 md:gap-5
+          "
+        >
+          <ul
+            class="
+              space-y-3
+              text-[#5e5e5e]
+              border-b
+              pb-7
+              md:pb-0 md:border-none
+              col-span-2
+              lg:col-span-1
+            "
+          >
+            <li><a href="#">Насосы</a></li>
+            <li><a href="#">Вакуумные насосы</a></li>
+            <li><a href="#">Насосы для бассейнов</a></li>
+            <li><a href="#">Насосы ЭЦВ</a></li>
+            <li><a href="#">Насосное оборудование</a></li>
+            <li><a href="#">Станция управления и защиты СУЗ</a></li>
+          </ul>
+          <ul
+            class="
+              space-y-3
+              text-[#5e5e5e]
+              border-b
+              pb-7
+              md:pb-0 md:border-none
+            "
+          >
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="./categories.html">Категории</a></li>
+            <li><a href="./contacts.html">Контакты</a></li>
+            <li><a href="./about.html">О компании</a></li>
+          </ul>
+          <ul class="space-y-3 text-[#5e5e5e]">
+            <li><a href="#">Карта сайта</a></li>
+            <li><a href="./reviews.html">Отзывы</a></li>
+          </ul>
+          <ul
+            class="
+              space-y-3
+              text-[#5e5e5e]
+              md:col-span-4 md:border-t md:pt-6
+              lg:col-span-1
+              lg:border-none
+              lg:pt-0
+              lg:mt-auto
+              lg:flex
+              lg:items-end
+              lg:justify-end
+            "
+          >
+            <li>
+              <a href="#" class="block select-none"
+                ><img
+                  src="../img/logo-footer.svg"
+                  alt="Логотип"
+                  class="ml-auto"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <!-- end of footer -->
+
+      <!-- dev -->
+      <div class="p-3">
+        <div class="container text-center">
+          <p class="font-light text-[12px]">
+            Сайт сделан с душой и командой
+            <a href="https://220studio.uz/" target="blank"> 220studio.uz </a>
+          </p>
+        </div>
+      </div>
+      <!-- end of dev -->
+    </div>
+    <script src="../js/index.js" defer></script>
+    <script src="../js/product.js" defer></script>
+  </body>
+</html>

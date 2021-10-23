@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <title>ESBUZ</title>
+  </head>
+  <body class="bg-[#f5f5f5]">
+    <div class="overflow-x-hidden">
+      <!-- header -->
+      <header class="py-[15px] bg-white fixed top-0 right-0 left-0 z-50">
+        <div class="container flex justify-between items-center gap-5">
+          <div class="select-none">
+            <img
+              src="./img/icons/burger.svg"
+              alt="Логотип"
+              class="lg:hidden"
+              id="burger-icon"
+            />
+            <img
+              src="./img/logo-desktop.svg"
+              alt="Логотип"
+              class="hidden lg:block"
+            />
+          </div>
+          <ul class="hidden lg:flex w-full max-w-[540px] justify-between">
+            <li>
+              <a href="./index.html" class="flex items-center">
+                <img
+                  src="./img/icons/home.svg"
+                  alt="Главная"
+                  class="mr-3 select-none"
+                />
+                Главная</a
+              >
+            </li>
+            <li>
+              <a href="./pages/categories.html" class="flex items-center">
+                <img
+                  src="./img/icons/category.svg"
+                  alt="Категории"
+                  class="mr-3 select-none"
+                />
+                Категории</a
+              >
+            </li>
+            <li>
+              <a href="./pages/contacts.html" class="flex items-center">
+                <img
+                  src="./img/icons/contacts.svg"
+                  alt="Контакты"
+                  class="mr-3 select-none"
+                />
+                Контакты</a
+              >
+            </li>
+            <li>
+              <a href="./pages/about.html" class="flex items-center">
+                <img
+                  src="./img/icons/about-company.svg"
+                  alt="О компании"
+                  class="mr-3 select-none"
+                />
+                О компании</a
+              >
+            </li>
+          </ul>
+          <ul
+            class="
+              hidden
+              lg:flex
+              w-full
+              max-w-[50px]
+              justify-between
+              uppercase
+              select-none
+            "
+          >
+            <li><a href="#" class="lang-active">ru</a></li>
+            <li><a href="#">uz</a></li>
+          </ul>
+          <form
+            action="#"
+            class="relative xl:w-full max-w-[285px] hidden lg:block"
+          >
+            <input
+              type="text"
+              class="
+                w-full
+                rounded-xl
+                pl-3
+                pr-[50px]
+                py-[10px]
+                outline-none
+                bg-[#F5F5F5]
+              "
+              placeholder="Поиск..."
+            />
+            <button
+              class="
+                bg-blue-700
+                p-4
+                rounded-xl
+                absolute
+                top-0
+                right-0
+                bottom-0
+                select-none
+              "
+            >
+              <img src="./img/main/search.svg" alt="Поиск" class="block" />
+            </button>
+          </form>
+          <div class="flex-1 select-none lg:hidden">
+            <a href="./index.html">
+              <img src="./img/logo.svg" alt="Логотип" class="block mx-auto" />
+            </a>
+          </div>
+          <div class="select-none lg:hidden" id="mobile-search">
+            <img src="./img/icons/search.svg" alt="Поиск" />
+          </div>
+        </div>
+        <div
+          class="
+            hidden
+            lg:hidden
+            bg-black bg-opacity-60
+            absolute
+            top-full
+            right-0
+            left-0
+            h-screen
+          "
+          id="mobile-menu"
+        >
+          <div
+            class="
+              bg-white
+              w-full
+              max-w-[255px]
+              rounded-br-[20px]
+              p-11
+              space-y-16
+            "
+          >
+            <ul class="space-y-10">
+              <li>
+                <a href="./index.html" class="flex items-center">
+                  <img src="./img/icons/home.svg" alt="Главная" class="mr-3" />
+                  Главная</a
+                >
+              </li>
+              <li>
+                <a href="./pages/categories.html" class="flex items-center">
+                  <img
+                    src="./img/icons/category.svg"
+                    alt="Категории"
+                    class="mr-3"
+                  />
+                  Категории</a
+                >
+              </li>
+              <li>
+                <a href="./pages/contacts.html" class="flex items-center">
+                  <img
+                    src="./img/icons/contacts.svg"
+                    alt="Контакты"
+                    class="mr-3"
+                  />
+                  Контакты</a
+                >
+              </li>
+              <li>
+                <a href="./pages/about.html" class="flex items-center">
+                  <img
+                    src="./img/icons/about-company.svg"
+                    alt="О компании"
+                    class="mr-3"
+                  />
+                  О компании</a
+                >
+              </li>
+            </ul>
+            <ul class="flex w-full max-w-[60px] justify-between uppercase">
+              <li><a href="#" class="lang-active">ru</a></li>
+              <li><a href="#">uz</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- end of header -->
+
+      <!-- search -->
+      <div
+        class="
+          hidden
+          fixed
+          w-full
+          h-screen
+          bg-black
+          z-40
+          bg-opacity-60
+          pt-[86px]
+        "
+        id="mobile-search-form"
+      >
+        <div class="container">
+          <form action="#" class="relative">
+            <input
+              type="text"
+              class="w-full rounded-xl pl-3 pr-[50px] py-[10px] outline-none"
+              placeholder="Поиск..."
+            />
+            <button
+              class="bg-blue-700 p-4 rounded-xl absolute top-0 right-0 bottom-0"
+            >
+              <img src="./img/main/search.svg" alt="Поиск" class="block" />
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- end of search -->
+
+      <!-- intro -->
+      <div
+        class="
+          h-52
+          sm:h-72
+          mt-[71px]
+          md:h-[250px]
+          lg:h-[350px]
+          xl:h-[530px]
+          select-none
+        "
+      >
+        <a href="#">
+          <img
+            src="./img/banner/mobile-banner1.jpg"
+            alt="Баннер"
+            class="w-full h-full object-cover object-top md:hidden"
+          />
+          <img
+            src="./img/banner/desktop-banner1.jpg"
+            alt="Баннер"
+            class="w-full h-full object-cover object-top hidden md:block"
+          />
+        </a>
+      </div>
+      <!-- end of intro -->
+
+      <!-- about -->
+      <div class="container pt-10 pb-5">
+        <h2 class="section-title">Поговорим немного о нас</h2>
+        <div class="lg:flex lg:flex-row-reverse lg:gap-5">
+          <div class="rounded-lg overflow-hidden select-none lg:w-1/2">
+            <img
+              src="./img/main/about.jpg"
+              alt="Поговорим немного о нас"
+              class="block mx-auto w-full h-full"
+            />
+          </div>
+          <div class="mt-6 space-y-8 font-light text-base lg:w-1/2">
+            <p>
+              Таким образом консультация с широким активом в значительной
+              степени обуславливает создание позиций, занимаемых участниками в
+              отношении поставленных задач. Повседневная практика показывает,
+              что реализация намеченных плановых заданий представляет собой
+              интересный эксперимент проверки существенных финансовых и
+              административных условий. С другой стороны новая модель
+              организационной деятельности требуют от нас анализа существенных
+              финансовых и административных условий.
+            </p>
+            <p>
+              Разнообразный и богатый опыт реализация намеченных плановых
+              заданий в значительной степени обуславливает создание модели
+              развития. Равным образом укрепление и развитие структуры требуют
+              определения и уточнения модели развития
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end of about -->
+
+      <!-- trigger -->
+      <div class="container p-5">
+        <div
+          class="
+            bg-white
+            rounded-3xl
+            p-8
+            grid grid-cols-2
+            md:grid-cols-4
+            lg:grid-cols-6
+            gap-9
+            md:gap-6
+            text-center text-sm text-[#114FAC]
+          "
+        >
+          <div
+            class="flex items-center flex-col w-20 md:w-full mx-auto space-y-3"
+          >
+            <img src="./img/main/icon4.svg" alt="" class="select-none" />
+            <p>Лучший сервис</p>
+          </div>
+          <div
+            class="flex items-center flex-col w-20 md:w-full mx-auto space-y-3"
+          >
+            <img src="./img/main/icon1.svg" alt="" class="select-none" />
+            <p>10 лет на рынке</p>
+          </div>
+          <div
+            class="flex items-center flex-col w-20 md:w-full mx-auto space-y-3"
+          >
+            <img src="./img/main/icon2.svg" alt="" class="select-none" />
+            <p>Более 3000 насосов продано</p>
+          </div>
+          <div
+            class="flex items-center flex-col w-20 md:w-full mx-auto space-y-3"
+          >
+            <img src="./img/main/icon3.svg" alt="" class="select-none" />
+            <p>Более 1000 отзывов</p>
+          </div>
+          <div
+            class="
+              flex
+              items-center
+              flex-col
+              w-20
+              md:w-full
+              mx-auto
+              space-y-3
+              md:col-start-2 md:col-end-3
+              lg:col-auto
+            "
+          >
+            <img src="./img/main/icon4.svg" alt="" class="select-none" />
+            <p>Лучший сервис</p>
+          </div>
+          <div
+            class="
+              flex
+              items-center
+              flex-col
+              w-20
+              md:w-full
+              mx-auto
+              space-y-3
+              md:col-start-3 md:col-end-4
+              lg:col-auto
+            "
+          >
+            <img src="./img/main/icon3.svg" alt="" class="select-none" />
+            <p>Более 1000 отзывов</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of trigger -->
+
+      <!-- category -->
+      <div class="container py-5">
+        <h2 class="section-title">Популярные категории</h2>
+        <div>
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-7">
+            <div class="text-center font-medium text-[15px]">
+              <div class="rounded-[20px] overflow-hidden mb-4 select-none">
+                <img
+                  src="./img/cards/4.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3>Станции управления защиты СУЗ</h3>
+            </div>
+            <div class="text-center font-medium text-[15px]">
+              <div class="rounded-[20px] overflow-hidden mb-4 select-none">
+                <img
+                  src="./img/cards/1.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3>Насосы для бассейнов</h3>
+            </div>
+            <div class="text-center font-medium text-[15px]">
+              <div class="rounded-[20px] overflow-hidden mb-4 select-none">
+                <img
+                  src="./img/cards/2.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3>Насосы вакуммные</h3>
+            </div>
+            <div class="text-center font-medium text-[15px]">
+              <div class="rounded-[20px] overflow-hidden mb-4 select-none">
+                <img
+                  src="./img/cards/3.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3>Насосы ЭЦВ</h3>
+            </div>
+            <div class="text-center font-medium text-[15px]">
+              <div class="rounded-[20px] overflow-hidden mb-4 select-none">
+                <img
+                  src="./img/cards/4.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3>Станции управления защиты СУЗ</h3>
+            </div>
+            <div class="text-center font-medium text-[15px]">
+              <div class="rounded-[20px] overflow-hidden mb-4 select-none">
+                <img
+                  src="./img/cards/2.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <h3>Насосы вакуммные</h3>
+            </div>
+          </div>
+          <div class="text-center mt-6 select-none">
+            <a
+              href="./pages/categories.html"
+              class="rounded-xl bg-[#114FAC] text-white px-7 py-2 inline-block"
+              >Перейти</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- end of category -->
+
+      <!-- top products -->
+      <div class="container py-5">
+        <h2 class="section-title">Больше всего покупают</h2>
+        <div class="swiper-top-products overflow-hidden relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="
+                  flex
+                  gap-3
+                  justify-between
+                  bg-white
+                  rounded-2xl
+                  overflow-hidden
+                  p-2
+                  items-center
+                  sm:flex-col sm:max-w-[210px] sm:p-4 sm:w-full sm:mx-auto
+                  md:mx-auto
+                "
+              >
+                <div
+                  class="
+                    w-28
+                    h-28
+                    border border-[#C4C4C4]
+                    rounded-2xl
+                    overflow-hidden
+                    sm:max-w-[180px] sm:h-[230px] sm:w-full
+                    select-none
+                  "
+                >
+                  <a href="./pages/product.html">
+                    <img
+                      src="./img/products/1.jpg"
+                      alt=""
+                      class="w-full h-full object-cover sm:object-scale-down"
+                    />
+                  </a>
+                </div>
+                <div class="space-y-2 flex-1">
+                  <a href="./pages/product.html">
+                    <h3 class="text-sm text-[#5E5E5E] font-medium sm:text-base">
+                      Насос поверхностный PlurJET 100
+                    </h3>
+                  </a>
+                  <a href="./pages/brand.html" class="inline-block">
+                    <p class="text-xs font-medium text-[#999999] sm:text-sm">
+                      Pedrollo
+                    </p>
+                  </a>
+                  <div class="flex justify-end sm:justify-center">
+                    <a
+                      href="./pages/product.html"
+                      class="
+                        main-btn
+                        py-2
+                        text-xs
+                        px-7
+                        inline-block
+                        sm:w-full sm:text-center sm:text-base
+                      "
+                      >Перейти</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  flex
+                  gap-3
+                  justify-between
+                  bg-white
+                  rounded-2xl
+                  overflow-hidden
+                  p-2
+                  items-center
+                  sm:flex-col sm:max-w-[210px] sm:p-4 sm:w-full sm:mx-auto
+                  md:mx-auto
+                "
+              >
+                <div
+                  class="
+                    w-28
+                    h-28
+                    border border-[#C4C4C4]
+                    rounded-2xl
+                    overflow-hidden
+                    sm:max-w-[180px] sm:h-[230px] sm:w-full
+                    select-none
+                  "
+                >
+                  <a href="./pages/product.html">
+                    <img
+                      src="./img/products/1.jpg"
+                      alt=""
+                      class="w-full h-full object-cover sm:object-scale-down"
+                    />
+                  </a>
+                </div>
+                <div class="space-y-2 flex-1">
+                  <a href="./pages/product.html">
+                    <h3 class="text-sm text-[#5E5E5E] font-medium sm:text-base">
+                      Насос поверхностный PlurJET 100
+                    </h3>
+                  </a>
+                  <a href="./pages/brand.html" class="inline-block">
+                    <p class="text-xs font-medium text-[#999999] sm:text-sm">
+                      Pedrollo
+                    </p>
+                  </a>
+                  <div class="flex justify-end sm:justify-center">
+                    <a
+                      href="./pages/product.html"
+                      class="
+                        main-btn
+                        py-2
+                        text-xs
+                        px-7
+                        inline-block
+                        sm:w-full sm:text-center sm:text-base
+                      "
+                      >Перейти</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  flex
+                  gap-3
+                  justify-between
+                  bg-white
+                  rounded-2xl
+                  overflow-hidden
+                  p-2
+                  items-center
+                  sm:flex-col sm:max-w-[210px] sm:p-4 sm:w-full sm:mx-auto
+                  md:mx-auto
+                "
+              >
+                <div
+                  class="
+                    w-28
+                    h-28
+                    border border-[#C4C4C4]
+                    rounded-2xl
+                    overflow-hidden
+                    sm:max-w-[180px] sm:h-[230px] sm:w-full
+                    select-none
+                  "
+                >
+                  <a href="./pages/product.html">
+                    <img
+                      src="./img/products/1.jpg"
+                      alt=""
+                      class="w-full h-full object-cover sm:object-scale-down"
+                    />
+                  </a>
+                </div>
+                <div class="space-y-2 flex-1">
+                  <a href="./pages/product.html">
+                    <h3 class="text-sm text-[#5E5E5E] font-medium sm:text-base">
+                      Насос поверхностный PlurJET 100
+                    </h3>
+                  </a>
+                  <a href="./pages/brand.html" class="inline-block">
+                    <p class="text-xs font-medium text-[#999999] sm:text-sm">
+                      Pedrollo
+                    </p>
+                  </a>
+                  <div class="flex justify-end sm:justify-center">
+                    <a
+                      href="./pages/product.html"
+                      class="
+                        main-btn
+                        py-2
+                        text-xs
+                        px-7
+                        inline-block
+                        sm:w-full sm:text-center sm:text-base
+                      "
+                      >Перейти</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  flex
+                  gap-3
+                  justify-between
+                  bg-white
+                  rounded-2xl
+                  overflow-hidden
+                  p-2
+                  items-center
+                  sm:flex-col sm:max-w-[210px] sm:p-4 sm:w-full sm:mx-auto
+                  md:mx-auto
+                "
+              >
+                <div
+                  class="
+                    w-28
+                    h-28
+                    border border-[#C4C4C4]
+                    rounded-2xl
+                    overflow-hidden
+                    sm:max-w-[180px] sm:h-[230px] sm:w-full
+                    select-none
+                  "
+                >
+                  <a href="./pages/product.html">
+                    <img
+                      src="./img/products/1.jpg"
+                      alt=""
+                      class="w-full h-full object-cover sm:object-scale-down"
+                    />
+                  </a>
+                </div>
+                <div class="space-y-2 flex-1">
+                  <a href="./pages/product.html">
+                    <h3 class="text-sm text-[#5E5E5E] font-medium sm:text-base">
+                      Насос поверхностный PlurJET 100
+                    </h3>
+                  </a>
+                  <a href="./pages/brand.html" class="inline-block">
+                    <p class="text-xs font-medium text-[#999999] sm:text-sm">
+                      Pedrollo
+                    </p>
+                  </a>
+                  <div class="flex justify-end sm:justify-center">
+                    <a
+                      href="./pages/product.html"
+                      class="
+                        main-btn
+                        py-2
+                        text-xs
+                        px-7
+                        inline-block
+                        sm:w-full sm:text-center sm:text-base
+                      "
+                      >Перейти</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  flex
+                  gap-3
+                  justify-between
+                  bg-white
+                  rounded-2xl
+                  overflow-hidden
+                  p-2
+                  items-center
+                  sm:flex-col sm:max-w-[210px] sm:p-4 sm:w-full sm:mx-auto
+                  md:mx-auto
+                "
+              >
+                <div
+                  class="
+                    w-28
+                    h-28
+                    border border-[#C4C4C4]
+                    rounded-2xl
+                    overflow-hidden
+                    sm:max-w-[180px] sm:h-[230px] sm:w-full
+                    select-none
+                  "
+                >
+                  <a href="./pages/product.html">
+                    <img
+                      src="./img/products/1.jpg"
+                      alt=""
+                      class="w-full h-full object-cover sm:object-scale-down"
+                    />
+                  </a>
+                </div>
+                <div class="space-y-2 flex-1">
+                  <a href="./pages/product.html">
+                    <h3 class="text-sm text-[#5E5E5E] font-medium sm:text-base">
+                      Насос поверхностный PlurJET 100
+                    </h3>
+                  </a>
+                  <a href="./pages/brand.html" class="inline-block">
+                    <p class="text-xs font-medium text-[#999999] sm:text-sm">
+                      Pedrollo
+                    </p>
+                  </a>
+                  <div class="flex justify-end sm:justify-center">
+                    <a
+                      href="./pages/product.html"
+                      class="
+                        main-btn
+                        py-2
+                        text-xs
+                        px-7
+                        inline-block
+                        sm:w-full sm:text-center sm:text-base
+                      "
+                      >Перейти</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  flex
+                  gap-3
+                  justify-between
+                  bg-white
+                  rounded-2xl
+                  overflow-hidden
+                  p-2
+                  items-center
+                  sm:flex-col sm:max-w-[210px] sm:p-4 sm:w-full sm:mx-auto
+                  md:mx-auto
+                "
+              >
+                <div
+                  class="
+                    w-28
+                    h-28
+                    border border-[#C4C4C4]
+                    rounded-2xl
+                    overflow-hidden
+                    sm:max-w-[180px] sm:h-[230px] sm:w-full
+                    select-none
+                  "
+                >
+                  <a href="./pages/product.html">
+                    <img
+                      src="./img/products/1.jpg"
+                      alt=""
+                      class="w-full h-full object-cover sm:object-scale-down"
+                    />
+                  </a>
+                </div>
+                <div class="space-y-2 flex-1">
+                  <a href="./pages/product.html">
+                    <h3 class="text-sm text-[#5E5E5E] font-medium sm:text-base">
+                      Насос поверхностный PlurJET 100
+                    </h3>
+                  </a>
+                  <a href="./pages/brand.html" class="inline-block">
+                    <p class="text-xs font-medium text-[#999999] sm:text-sm">
+                      Pedrollo
+                    </p>
+                  </a>
+                  <div class="flex justify-end sm:justify-center">
+                    <a
+                      href="./pages/product.html"
+                      class="
+                        main-btn
+                        py-2
+                        text-xs
+                        px-7
+                        inline-block
+                        sm:w-full sm:text-center sm:text-base
+                      "
+                      >Перейти</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  flex
+                  gap-3
+                  justify-between
+                  bg-white
+                  rounded-2xl
+                  overflow-hidden
+                  p-2
+                  items-center
+                  sm:flex-col sm:max-w-[210px] sm:p-4 sm:w-full sm:mx-auto
+                  md:mx-auto
+                "
+              >
+                <div
+                  class="
+                    w-28
+                    h-28
+                    border border-[#C4C4C4]
+                    rounded-2xl
+                    overflow-hidden
+                    sm:max-w-[180px] sm:h-[230px] sm:w-full
+                    select-none
+                  "
+                >
+                  <a href="./pages/product.html">
+                    <img
+                      src="./img/products/1.jpg"
+                      alt=""
+                      class="w-full h-full object-cover sm:object-scale-down"
+                    />
+                  </a>
+                </div>
+                <div class="space-y-2 flex-1">
+                  <a href="./pages/product.html">
+                    <h3 class="text-sm text-[#5E5E5E] font-medium sm:text-base">
+                      Насос поверхностный PlurJET 100
+                    </h3>
+                  </a>
+                  <a href="./pages/brand.html" class="inline-block">
+                    <p class="text-xs font-medium text-[#999999] sm:text-sm">
+                      Pedrollo
+                    </p>
+                  </a>
+                  <div class="flex justify-end sm:justify-center">
+                    <a
+                      href="./pages/product.html"
+                      class="
+                        main-btn
+                        py-2
+                        text-xs
+                        px-7
+                        inline-block
+                        sm:w-full sm:text-center sm:text-base
+                      "
+                      >Перейти</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  flex
+                  gap-3
+                  justify-between
+                  bg-white
+                  rounded-2xl
+                  overflow-hidden
+                  p-2
+                  items-center
+                  sm:flex-col sm:max-w-[210px] sm:p-4 sm:w-full sm:mx-auto
+                  md:mx-auto
+                "
+              >
+                <div
+                  class="
+                    w-28
+                    h-28
+                    border border-[#C4C4C4]
+                    rounded-2xl
+                    overflow-hidden
+                    sm:max-w-[180px] sm:h-[230px] sm:w-full
+                    select-none
+                  "
+                >
+                  <a href="./pages/product.html">
+                    <img
+                      src="./img/products/1.jpg"
+                      alt=""
+                      class="w-full h-full object-cover sm:object-scale-down"
+                    />
+                  </a>
+                </div>
+                <div class="space-y-2 flex-1">
+                  <a href="./pages/product.html">
+                    <h3 class="text-sm text-[#5E5E5E] font-medium sm:text-base">
+                      Насос поверхностный PlurJET 100
+                    </h3>
+                  </a>
+                  <a href="./pages/brand.html" class="inline-block">
+                    <p class="text-xs font-medium text-[#999999] sm:text-sm">
+                      Pedrollo
+                    </p>
+                  </a>
+                  <div class="flex justify-end sm:justify-center">
+                    <a
+                      href="./pages/product.html"
+                      class="
+                        main-btn
+                        py-2
+                        text-xs
+                        px-7
+                        inline-block
+                        sm:w-full sm:text-center sm:text-base
+                      "
+                      >Перейти</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="
+              absolute
+              top-0
+              bottom-0
+              -right-1
+              z-10
+              bg-gradient-to-l
+              w-[200px]
+              from-[#f5f5f5]
+              rounded-tr-xl rounded-br-xl
+              select-none
+              pointer-events-none
+            "
+          ></div>
+        </div>
+      </div>
+      <!-- end of top products -->
+
+      <!-- review -->
+      <div class="container py-5 space-y-5">
+        <h2 class="section-title">Отзывы клиентов</h2>
+        <div class="swiper-reviews overflow-hidden relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="
+                  bg-white
+                  flex flex-col
+                  p-6
+                  rounded-[20px]
+                  md:h-[340px] md:w-[495px]
+                  mx-auto
+                "
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="mr-3 select-none">
+                      <img src="./img/avatar.svg" alt="Аватар" />
+                    </div>
+                    <p class="w-full max-w-[100px] text-[#2D2D2D] leading-none">
+                      Игорь Рудаков
+                    </p>
+                  </div>
+                  <div class="select-none">
+                    <img src="./img/star.svg" alt="Рейтинг" />
+                  </div>
+                </div>
+                <div
+                  class="
+                    bg-[#F9F9F9]
+                    p-4
+                    rounded-lg
+                    text-[#5E5E5E]
+                    mt-auto
+                    h-full
+                  "
+                >
+                  <p>
+                    Хороший магазин, недавно покупал насосы у них, всем советую
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  bg-white
+                  flex flex-col
+                  p-6
+                  rounded-[20px]
+                  md:h-[340px] md:w-[495px]
+                  mx-auto
+                "
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="mr-3 select-none">
+                      <img src="./img/avatar.svg" alt="Аватар" />
+                    </div>
+                    <p class="w-full max-w-[100px] text-[#2D2D2D] leading-none">
+                      Игорь Рудаков
+                    </p>
+                  </div>
+                  <div class="select-none">
+                    <img src="./img/star.svg" alt="Рейтинг" />
+                  </div>
+                </div>
+                <div
+                  class="
+                    bg-[#F9F9F9]
+                    p-4
+                    rounded-lg
+                    text-[#5E5E5E]
+                    mt-auto
+                    h-full
+                  "
+                >
+                  <p>
+                    Хороший магазин, недавно покупал насосы у них, всем советую
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  bg-white
+                  flex flex-col
+                  p-6
+                  rounded-[20px]
+                  md:h-[340px] md:w-[495px]
+                  mx-auto
+                "
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="mr-3 select-none">
+                      <img src="./img/avatar.svg" alt="Аватар" />
+                    </div>
+                    <p class="w-full max-w-[100px] text-[#2D2D2D] leading-none">
+                      Игорь Рудаков
+                    </p>
+                  </div>
+                  <div class="select-none">
+                    <img src="./img/star.svg" alt="Рейтинг" />
+                  </div>
+                </div>
+                <div
+                  class="
+                    bg-[#F9F9F9]
+                    p-4
+                    rounded-lg
+                    text-[#5E5E5E]
+                    mt-auto
+                    h-full
+                  "
+                >
+                  <p>
+                    Хороший магазин, недавно покупал насосы у них, всем советую
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="
+                  bg-white
+                  flex flex-col
+                  p-6
+                  rounded-[20px]
+                  md:h-[340px] md:w-[495px]
+                  mx-auto
+                "
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="mr-3 select-none">
+                      <img src="./img/avatar.svg" alt="Аватар" />
+                    </div>
+                    <p class="w-full max-w-[100px] text-[#2D2D2D] leading-none">
+                      Игорь Рудаков
+                    </p>
+                  </div>
+                  <div class="select-none">
+                    <img src="./img/star.svg" alt="Рейтинг" />
+                  </div>
+                </div>
+                <div
+                  class="
+                    bg-[#F9F9F9]
+                    p-4
+                    rounded-lg
+                    text-[#5E5E5E]
+                    mt-auto
+                    h-full
+                  "
+                >
+                  <p>
+                    Хороший магазин, недавно покупал насосы у них, всем советую
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="
+              hidden
+              md:block
+              absolute
+              top-0
+              bottom-0
+              -right-1
+              z-10
+              bg-gradient-to-l
+              w-[200px]
+              from-[#f5f5f5]
+              rounded-tr-xl rounded-br-xl
+              select-none
+              pointer-events-none
+            "
+          ></div>
+          <div
+            class="
+              hidden
+              md:block
+              xl:hidden
+              absolute
+              top-0
+              bottom-0
+              -left-1
+              z-10
+              bg-gradient-to-r
+              w-[200px]
+              from-[#f5f5f5]
+              rounded-tr-xl rounded-br-xl
+              select-none
+              pointer-events-none
+            "
+          ></div>
+        </div>
+        <div class="text-center">
+          <a href="./pages/reviews.html" class="main-btn inline-block"
+            >Оставить отзыв</a
+          >
+        </div>
+      </div>
+      <!-- end of review -->
+
+      <!-- footer -->
+      <footer class="bg-white py-11">
+        <div
+          class="
+            container
+            space-y-5
+            md:space-y-0 md:grid md:grid-cols-4 md:gap-5
+          "
+        >
+          <ul
+            class="
+              space-y-3
+              text-[#5e5e5e]
+              border-b
+              pb-7
+              md:pb-0 md:border-none
+              col-span-2
+              lg:col-span-1
+            "
+          >
+            <li><a href="#">Насосы</a></li>
+            <li><a href="#">Вакуумные насосы</a></li>
+            <li><a href="#">Насосы для бассейнов</a></li>
+            <li><a href="#">Насосы ЭЦВ</a></li>
+            <li><a href="#">Насосное оборудование</a></li>
+            <li><a href="#">Станция управления и защиты СУЗ</a></li>
+          </ul>
+          <ul
+            class="
+              space-y-3
+              text-[#5e5e5e]
+              border-b
+              pb-7
+              md:pb-0 md:border-none
+            "
+          >
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Категории</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">О компании</a></li>
+          </ul>
+          <ul class="space-y-3 text-[#5e5e5e]">
+            <li><a href="#">Карта сайта</a></li>
+            <li><a href="#">Отзывы</a></li>
+          </ul>
+          <ul
+            class="
+              space-y-3
+              text-[#5e5e5e]
+              md:col-span-4 md:border-t md:pt-6
+              lg:col-span-1
+              lg:border-none
+              lg:pt-0
+              lg:mt-auto
+              lg:flex
+              lg:items-end
+              lg:justify-end
+            "
+          >
+            <li>
+              <a href="#" class="block select-none"
+                ><img src="./img/logo-footer.svg" alt="Логотип" class="ml-auto"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <!-- end of footer -->
+
+      <!-- dev -->
+      <div class="p-3">
+        <div class="container text-center">
+          <p class="font-light text-[12px]">
+            Сайт сделан с душой и командой
+            <a href="https://220studio.uz/" target="blank"> 220studio.uz </a>
+          </p>
+        </div>
+      </div>
+      <!-- end of dev -->
+    </div>
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/swiper-products.js" defer></script>
+    <script src="./js/swiper-reviews.js" defer></script>
+    <script src="./js/index.js" defer></script>
+  </body>
+</html>
